@@ -1,0 +1,129 @@
+:root {
+    color-scheme: light;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #172b4d;
+    background: #f2f6fc;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(73, 133, 255, .13), transparent 32%),
+        radial-gradient(circle at 85% 85%, rgba(35, 190, 157, .12), transparent 30%),
+        #f2f6fc;
+}
+
+.caixa {
+    width: min(100%, 440px);
+    padding: 38px;
+    border: 1px solid rgba(220, 229, 241, .9);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, .96);
+    box-shadow: 0 24px 70px rgba(36, 60, 100, .12);
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #142b4d;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: clamp(1.7rem, 6vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -.045em;
+    line-height: 1.15;
+}
+
+.status {
+    min-height: 22px;
+    margin: 0 0 26px;
+    color: #65758b;
+    font-size: .92rem;
+}
+
+#form-conv {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    margin-top: 8px;
+    color: #334864;
+    font-size: .92rem;
+    font-weight: 700;
+}
+
+input,
+select {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 15px;
+    border: 1px solid #d7e0ed;
+    border-radius: 12px;
+    outline: none;
+    background: #fbfcfe;
+    color: #172b4d;
+    font: inherit;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #3978e8;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(57, 120, 232, .13);
+}
+
+button {
+    min-height: 54px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #3478e5, #245fc6);
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 9px 20px rgba(40, 102, 205, .22);
+    transition: transform .18s, box-shadow .18s, filter .18s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 12px 24px rgba(40, 102, 205, .28);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:focus-visible {
+    outline: 3px solid rgba(57, 120, 232, .35);
+    outline-offset: 3px;
+}
+
+.erro {
+    min-height: 20px;
+    margin: 2px 0 0;
+    color: #c0393b;
+    font-size: .9rem;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
+
+    .caixa {
+        padding: 28px 22px;
+        border-radius: 20px;
+    }
+}
